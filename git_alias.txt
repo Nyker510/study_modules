@@ -1,6 +1,53 @@
 
 git alias 覚書
+[user]
+	name = nyker510
+	email = yamaguchi.takahiro.48a@st.kyoto-u.ac.jp
 [alias]
-  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-  lga = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-  graph = log --graph --date-order --all --pretty=format:'%h %Cred%d %Cgreen%ad %Cblue%cn %Creset%s' --date=short
+  	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  	lga = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	graph = log --graph --date-order --all --pretty=format:'%h %Cred%d %Cgreen%ad %Cblue%cn %Creset%s' --date=short
+	st = status
+	co = checkout
+	ci = commit -v
+	di = diff
+	br = branch
+	puhs = push
+	psuh = push
+	pus = push
+	puh = push
+	pl = !git pull && git submodule update --init
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	grep = auto
+[core]
+	excludesfile = /Users/NYer510/.gitignore
+[push]
+	default = current
+
+
+コピペで流すと便利
+===============================================
+    git config --global color.diff   auto
+    git config --global color.status auto
+    git config --global color.branch auto
+    git config --global color.grep   auto
+
+    git config --global core.excludesfile $HOME/.gitignore
+    git config --global push.default current
+
+    git config --global alias.st   status
+    git config --global alias.co   checkout
+    git config --global alias.ci   commit\ -v
+    git config --global alias.di   diff
+    git config --global alias.br   branch
+    git config --global alias.puhs push
+    git config --global alias.psuh push
+    git config --global alias.pus  push
+    git config --global alias.puh  push
+    git config --global alias.pl   '!git pull && git submodule update --init'
+
+    echo .DS_Store >> $HOME/.gitignore
+    echo Thumbs.db >> $HOME/.gitignore
